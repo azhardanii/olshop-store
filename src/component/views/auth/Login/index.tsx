@@ -65,11 +65,22 @@ const LoginView = () => {
             </div>
             <button
               type="submit"
-              className="border hover:bg-orange-600 bg-orange-500 font-semibold text-white py-1 px-2 mb-3"
+              className="border hover:bg-orange-600 bg-orange-500 font-semibold text-white py-1 px-2"
             >
               {isLoading ? "Loading...." : "Login"}
             </button>
           </form>
+          <hr className="my-5" />
+          <div className="w-full flex items-center justify-center hover:bg-orange-600 bg-orange-500 text-white mb-3">
+            <button
+              type="button"
+              onClick={() => signIn("google", { callbackUrl, redirect: false })}
+              className="font-semibold py-1 px-2 flex items-center"
+            >
+              <i className="bx bxl-google text-xl mr-1" />
+              Login with Google
+            </button>
+          </div>
         </div>
         <p>
           Don{"'"}t have an account? Sign up{" "}
